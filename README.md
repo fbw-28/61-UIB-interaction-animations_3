@@ -6,4 +6,4 @@ Use the given html file and icons in the `images` folder.
 
 Processing Example:
 
-(./processing-example.gif)
+![](./processing-example.gif)
