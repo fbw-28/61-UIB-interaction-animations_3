@@ -1,6 +1,9 @@
 # Processing files
 
-Let's create a processing files animation,
-take a look at the example movie in the folder.
+Create a processing files animation.
 
-Use the icons in the `images` folder.
+Use the given html file and icons in the `images` folder.
+
+Processing Example:
+
+![](./processing-example.gif)
