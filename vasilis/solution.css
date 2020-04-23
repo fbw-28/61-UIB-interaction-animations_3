@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.processing-container {
+    width: 300px;
+    height: 1000px;
+    position: relative;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+img {
+    width: 200px;
+}
+.processing-label {
+    position: absolute;
+    bottom: 220px;
+    right: 80px;
+}
+.labelOne {
+    animation-name: label;
+    animation-duration: 0.8s;
+    animation-iteration-count: 4;
+    animation-timing-function: cubic-bezier(.99,-0.01,.07,1.17);
+    opacity: 0;    
+}
+.labelTwo {
+    animation-name: finish;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:cubic-bezier(.99,-0.01,.07,1.17);
+    visibility: hidden;
+    animation-delay: 3.2s; 
+}
+
+.item1 {
+    position: absolute;
+    top: 30%;
+    animation-name: one;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function:cubic-bezier(.48,1.12,.44,.61);
+    visibility: hidden; 
+}
+
+.item2 {
+    position: absolute;
+    top: 30%;
+    visibility: hidden;
+    animation-name: two;
+    animation-duration: 0.8s;
+    animation-iteration-count: 3;
+    animation-timing-function:cubic-bezier(.48,1.12,.44,.61);
+    animation-delay: 0.8s;
+    
+
+}
+.item3 {
+    position: absolute;
+    top: 30%;
+    visibility: hidden;
+    animation-name: three;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0,1.02,.23,.24);
+    animation-delay:  3.2s;
+    animation-fill-mode: both;
+}
+
+@keyframes label {
+    from {
+        opacity: 1;
+    }
+     to {
+        opacity: 0;
+    }   
+}
+@keyframes finish {
+    from, to {
+    visibility: visible;
+}   
+}
+
+@keyframes one {
+
+    0% { 
+        transform: translateX(80px);
+        visibility: visible;
+    }
+    50% {
+        transform: translateZ(50px);
+    }
+    100% {
+        
+        transform: translateZ(-500px); 
+    }
+    
+}
+@keyframes two {
+
+0% { 
+    transform: translateX(80px);
+    visibility: visible;
+}
+50% {
+    transform: translateZ(50px);
+}
+75% {
+    
+    transform: translateZ(-500px); 
+}
+100% {
+    transform: translateX(-1000px);
+}
+}
+ 
+ @keyframes three {
+    0% { 
+        transform: translateY(-10px);
+    }
+    20% {
+        transform: translateY(10px);
+    }
+    40% {
+        transform: translateY(-7px);
+
+    }
+    60% {
+        transform: translateY(7px);
+
+    }
+    80% {
+        transform: translateY(-3px);
+
+    }
+    100% {
+        
+        transform: translateY(3px); 
+        visibility: visible;
+
+    }
+
+
+
