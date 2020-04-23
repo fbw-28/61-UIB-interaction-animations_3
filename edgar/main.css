@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Comic+Neue:400,700&display=swap');
+
+
+
 body{
     text-align: center;
+    font-family: 'Comic Neue', cursive;
+
 
 }
 
@@ -45,6 +51,7 @@ body{
         opacity: 1;
         visibility: visible;
     }
+
     100% {
         transform: scale(0.8) translateX(-300%);
         opacity: 0;
@@ -94,27 +101,27 @@ body{
     animation-name: file-success-ani;
     animation-duration: 2s;   
     animation-delay: 4s;
+    animation-fill-mode: forwards ;
 }
 
 @keyframes file-success-ani {
 
     0% {
-        transform: translateY(-20%);
+        transform: translateY(-20%) scale(1.2);
         opacity: 0;
         visibility: hidden;
     }
 
     10% {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
         opacity: 1;
         visibility: visible;
     }
 
     20% {
-        transform: translateY(-15%);
+        transform: translateY(-8%);
         opacity: 1;
     }
-
 
     30% {
         transform: translateY(0);
@@ -122,22 +129,17 @@ body{
         visibility: visible;
     }
 
-    80% {
+    100% {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
-
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-
 }
 
 .processing-label{
     margin-left: 8px;
     font-size: 16px;
+    font-weight: 700;
 }
 
 .processing{
@@ -164,6 +166,7 @@ body{
 }
 
 .done{
+    font-weight: 700;
     margin-left: 40px;
     font-size: 16px;
     position: absolute;
@@ -172,6 +175,8 @@ body{
     animation-name: done-ani;
     animation-duration: 2s;
     animation-delay: 4s;
+    animation-fill-mode: forwards ;
+    
 }
 
 @keyframes done-ani {
