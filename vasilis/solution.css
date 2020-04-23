@@ -28,11 +28,11 @@ img {
     opacity: 0;    
 }
 .labelTwo {
-    animation-name: label;
+    animation-name: finish;
     animation-duration: 1.5s;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-timing-function:cubic-bezier(.99,-0.01,.07,1.17);
-    opacity: 0;
+    visibility: hidden;
     animation-delay: 3.2s; 
 }
 
@@ -67,6 +67,7 @@ img {
     animation-iteration-count: 1;
     animation-timing-function: cubic-bezier(0,1.02,.23,.24);
     animation-delay:  3.2s;
+    animation-fill-mode: both;
 }
 
 @keyframes label {
@@ -75,14 +76,16 @@ img {
     }
      to {
         opacity: 0;
-    }
-            
-        
+    }   
+}
+@keyframes finish {
+    from, to {
+    visibility: visible;
+}   
 }
 
 @keyframes one {
 
-   
     0% { 
         transform: translateX(80px);
         visibility: visible;
@@ -117,7 +120,6 @@ img {
  @keyframes three {
     0% { 
         transform: translateY(-10px);
-        visibility: visible;
     }
     20% {
         transform: translateY(10px);
@@ -137,9 +139,9 @@ img {
     100% {
         
         transform: translateY(3px); 
+        visibility: visible;
+
     }
- }
-        
 
 
 
