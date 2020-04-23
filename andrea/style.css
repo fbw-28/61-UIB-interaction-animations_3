@@ -1,0 +1,143 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+.processing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10vh auto;
+    width: 200px;
+    height: 180px;
+}
+
+.processing-item {
+    position: absolute;
+}
+ 
+img {
+    width: 100px;
+}
+
+.processing-label {
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.processing-item {
+    opacity: 0;
+  }
+  
+#first {
+    animation-name: first;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#second  {
+    animation-name: second;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+}
+
+#third  {
+    animation-name: third;
+    animation-duration: 2s;
+    animation-delay: 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#text1 {
+    animation-name: flashing-text1;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+}
+
+#text2 {
+    animation-name: flashing-text2;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes first {
+    from, to{
+        opacity: 1;
+    }
+    0% {
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes second {
+    0% {
+        opacity: 1;
+        transform: translateX(100px);
+    }
+    60% {
+        transform: translateX(0px);
+    }
+    80% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: translateX(-100px) scale(0.8);
+        opacity: 1;
+    }
+    91% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes third {
+    from, to{
+        opacity: 1;
+    }
+    0% {
+        transform: translateY(-80px);
+    }
+    50% {
+        transform: translateY(0);
+    } 
+    75% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes flashing-text1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flashing-text2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
