@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.img-one {
+    width: 100px;
+    height: auto;
+    margin-left: 900px;
+    margin-top: 200px;
+    position: fixed;
+    animation: mymove-one 2s;
+    animation-iteration-count: 1; 
+  }
+
+@keyframes mymove-one {
+    from {top: 0px; right: 100px;}
+    10%  {top: -35px; right: 180px; width: 110px; height: auto;}          
+    50%  {top: -25px; right: 550px; width: 100px; height: auto;}          
+    90% {top: -20px; right: 550px;  width: 100px; height: auto;}
+    95% {top: -15x; right: 550px;  width: 85px; height: auto;}
+    to {top: -0px; right: 550px;  width: 50px; height: auto;}
+  }
+
+.img-two {
+  width: 100px;
+  height: auto;
+  margin-left: 900px;
+  margin-top: 200px;
+  position: fixed;
+  animation: mymove-two 2s;  
+  animation-delay: 2s;
+  animation-iteration-count: 1; 
+}
+
+@keyframes mymove-two {
+  from {top: 0px; right: 100px;}
+  10%  {top: -35px; right: 180px; width: 110px; height: auto;}          
+  50%  {top: -25px; right: 550px; width: 100px; height: auto;}          
+  90% {top: -20px; right: 550px;  width: 100px; height: auto;}
+  95% {top: -15x; right: 550px;  width: 85px; height: auto;}
+  to {top: -0px; right: 550px;  width: 50px; height: auto;}
+}
+
+.img-three {
+  width: 100px;
+  height: auto;
+  margin-left: 900px;
+  margin-top: 200px;
+  position: fixed;
+  animation: mymove-three 6s;  
+  animation-delay: 4s;
+  animation-iteration-count: 1; 
+}
+
+@keyframes mymove-three {
+  from {top: 0px; right: 100px;}
+  10%  {top: -35px; right: 180px; width: 110px; height: auto;}          
+  20%  {top: -25px; right: 550px; width: 100px; height: auto;}          
+  30% {top: -20px; right: 550px;  width: 95px; height: auto;}
+  50% {top: -15x; right: 550px;  width: 100px; height: auto;}
+  100% {top: -0px; right: 550px;  width: 100px; height: auto;}
+}
+
+.processing-label-one {
+  width: 100px;
+  height: auto;
+  margin-left: 900px;
+  margin-top: 320px;
+  position: fixed;
+  animation: text-one 4s;  
+  animation-delay: 0s;
+  animation-iteration-count: 1; 
+}
+
+@keyframes text-one {
+  0% {top: -0px; right: 550px; opacity: 1;}
+  10%  {top: -0px; right: 550px; opacity: 0.1;}
+  20%  {top: -0px; right: 550px; opacity: 1;}
+  30%  {top: -0px; right: 550px; opacity: 0.1;}
+  40%  {top: -0px; right: 550px; opacity: 1;}
+  50%  {top: -0px; right: 550px; opacity: 0.1;}
+  60%  {top: -0px; right: 550px; opacity: 1;}
+  70%  {top: -0px; right: 550px; opacity: 0.1;}
+  80%  {top: -0px; right: 550px; opacity: 1;}
+  90%  {top: -0px; right: 550px; opacity: 0.1;}
+  100%  {top: -0px; right: 550px; opacity: 1;}
+}
+
+.processing-label-two {
+  width: 100px;
+  height: auto;
+  margin-left: 900px;
+  margin-top: 320px;
+  position: fixed;
+  animation: text-two 1s;  
+  animation-delay: 4.5s;
+  animation-iteration-count: infinite; 
+}
+
+@keyframes text-two {
+  0% {top: -0px; right: 540px; opacity: 1;}
+  50%  {top: -0px; right: 540px; opacity: 0.1;}
+  100%  {top: -0px; right: 540px; opacity: 1;}
+}
