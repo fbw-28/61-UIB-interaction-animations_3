@@ -45,14 +45,14 @@
    
      
        75% {
-         transform: translateX(200px) translateY(50px) scale(0.9);
+         transform: translateX(200px) translateY(50px) scale(0.7);
          opacity: 1;
        
        }
    
    
        100% {
-         transform: translateX(-50px) translateY(50px) scale(0.9);
+         transform: translateX(-50px) translateY(50px) scale(0.7);
          opacity: 0;
        
         
@@ -92,14 +92,14 @@
     
       
         75% {
-          transform: translateX(200px) translateY(50px) scale(0.9);
+          transform: translateX(200px) translateY(50px) scale(0.7);
           opacity: 1;
         
         }
     
     
         100% {
-          transform: translateX(-50px) translateY(50px) scale(0.9);
+          transform: translateX(-50px) translateY(50px) scale(0.7);
           opacity: 0;
         
          
@@ -124,7 +124,7 @@
         }
 
         20% {
-            transform: translateY(20px) translateX(200px);
+            transform: translateY(30px) translateX(200px);
             opacity: 1;
           }
 
@@ -132,25 +132,26 @@
             transform: translateY(50px) translateX(200px);
           }
 
-        65% {
-            transform: translateY(10px) translateX(200px);
+        60% {
+            transform: translateY(30px) translateX(200px);
           }
           
         80% {
-            transform: translateY(50px) scale(1) translateX(200px);
+            transform: translateY(50px) translateX(200px) scale(0.7);
             opacity: 1;
           }
 
         100% {
-          transform: translateY(50px) translateX(-50px) scale(1);
+          transform: translateY(50px) translateX(-50px) scale(0.7);
           opacity: 0;
         }
       }
       
 
       .processing-label { 
+         font-size: 14px;
          position: absolute;
-         left: 210px;
+         left: 220px;
          top: 185px;
       
     
@@ -160,7 +161,6 @@
 
 
       .processing {
-       
         animation: processing 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         animation-iteration-count: 4;
       }
@@ -186,7 +186,7 @@
 
 
       .done {
-        margin: 0 30px;
+        margin: 0 20px;
         animation: done 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         animation-delay: 4s;
       }
