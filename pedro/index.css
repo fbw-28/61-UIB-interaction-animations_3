@@ -152,10 +152,7 @@
          font-size: 14px;
          position: absolute;
          left: 220px;
-         top: 185px;
-      
-    
-       
+         top: 185px;  
         
       }
 
@@ -186,7 +183,7 @@
 
 
       .done {
-        margin: 0 20px;
+        margin: 0 25px;
         animation: done 1.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         animation-delay: 4s;
       }
