@@ -125,30 +125,31 @@ img {
     }
 }
 
+
 @keyframes disappear {
     from {
-        opacity: 1;
+        visibility: visible;
     }
 
     1% {
-        opacity: 0;
+        visibility: hidden;
     }
 
     to {
-        opacity: 0;
+        visibility: hidden;
     }
 }
 
 @keyframes disappear_2 {
     from {
-        opacity: 1;
+        visibility: visible;
     }
 
     1% {
-        opacity: 0;
+        visibility: hidden;
     }
 
     to {
-        opacity: 0;
+        visibility: hidden;
     }
 }
