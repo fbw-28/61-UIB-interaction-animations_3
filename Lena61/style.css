@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(226, 113, 132, 0.589);
+}
+
+.processing-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    transition: 1s all;
+}
+
+.processing-item {
+    animation: first 2s ease-out, second 2s ease-out 2s 3, third 3s ease-out 8s;
+}
+
+.folder {
+    animation: disappear 10s 2s;
+}
+
+.file {
+    animation: disappear 2s, disappear_2 3s 8s;
+}
+
+.ready_file {
+    animation: disappear 8s;
+}
+
+.process {
+    animation: fade 2s ease-out 5, disappear 4s 8s;
+}
+
+.done {
+    animation: disappear 8s, fade 2s ease-out 8s;
+}
+
+@keyframes first {
+    from {
+        transform: translateX(2000px) scale(1);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: translateX(0) scale(0.8);
+    }
+}
+
+@keyframes second {
+    from {
+        transform: translateX(2000px);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateX(0px) scale(0.8);
+        opacity: 0.5;
+    }
+
+    90% {
+        transform: translateX(-60px) scale(0.8);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateX(-100px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+
+@keyframes third {
+    from {
+        transform: translateY(-300px);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.25;
+    }
+
+    60% {
+        opacity: 0.7;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes disappear {
+    from {
+        visibility: visible;
+    }
+
+    1% {
+        visibility: hidden;
+    }
+
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes disappear_2 {
+    from {
+        visibility: visible;
+    }
+
+    1% {
+        visibility: hidden;
+    }
+
+    to {
+        visibility: hidden;
+    }
+}
