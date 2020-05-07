@@ -1,0 +1,158 @@
+*,
+*.before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fde1de;
+}
+
+.processing-container {
+  width: 30vw;
+  height: 30vh;
+  /* border: 0.1px solid black; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.processing-item {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.processing-item img {
+  width: 50px;
+  opacity: 0;
+}
+
+.processing-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.processing-label span {
+  opacity: 0;
+}
+
+/* ##### ANIMATION & KEYFRAMES #####  */
+
+.processing-container:hover img#img-folder {
+  animation-name: anim-img-folderFile;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.processing-container:hover img#img-file {
+  animation-name: anim-img-folderFile;
+  animation-duration: 1.1s;
+  animation-iteration-count: 3;
+  animation-delay: 1s;
+}
+
+@keyframes anim-img-folderFile {
+  0% {
+    opacity: 0;
+    transform: translate(100%, -5%);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translate(0, -5%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(0.75);
+  }
+}
+
+.processing-container:hover img#img-success {
+  animation-name: anim-img-success;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-delay: 4.4s;
+}
+
+@keyframes anim-img-success {
+  from {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+
+  20% {
+    transform: translateY(25%);
+  }
+
+  35% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.processing-container:hover span#processing {
+  animation-name: anim-span;
+  animation-duration: 1.1s;
+  animation-iteration-count: 4;
+}
+
+.processing-container:hover span#done {
+  animation-name: anim-span;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-delay: 4.4s;
+}
+
+@keyframes anim-span {
+  from {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
